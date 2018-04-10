@@ -1,19 +1,22 @@
-# this is test script
 
-a <- rnorm(100)
+x <- c(2,3,9)
+y <- c(9,7,2)
+year <- 2000:2012
+names <- c("amit", "priya", "radhika", "rohan")
+y[1]
+y[length(y)]
 
-# this is test script
+person <- list(name="rohan", x=2, y=9, year=2000)
+person
 
-a <- rnorm(100)
-b <- rnorm(100)
+person$name
+person$x
 
+cbind(year, x, y)
 
-print(sample(c(2,5,3), size=3, replace=FALSE))
-print(sample(c(2,5,3), size=3, replace=TRUE))
-barplot(table(sample(1:3, size=1000, replace=TRUE, prob=c(.30,.60,.10))))
+D <- data.frame(names, year, x, y)
+nrow(D)
+D$names
+D$names[nrow(D)]
+D$names[length(D$names)]
 
-
-
-tbl <- read.table(file.choose(),header=TRUE,sep=",")
-population <- tbl["POPESTIMATE2009"]
-print(summary(population[-1:-5,]))
