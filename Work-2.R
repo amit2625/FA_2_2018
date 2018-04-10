@@ -1,20 +1,10 @@
-# this is test script
-
-a <- rnorm(100)
-b <- rnorm(100)
 
 
-print(sample(c(2,5,3), size=3, replace=FALSE))
-print(sample(c(2,5,3), size=3, replace=TRUE))
-barplot(table(sample(1:3, size=1000, replace=TRUE, prob=c(.30,.60,.10))))
+D <- data.frame(x=c(3,2,4,8), y=c(2,7,6,4))
+D
 
+indexes <- order(D$x)
+D[indexes,]
 
+D[rev(order(D$y)),]
 
-tbl <- read.table(file.choose(),header=TRUE,sep=",")
-population <- tbl["POPESTIMATE2009"]
-print(summary(population[-1:-5,]))
-
-print(sample(1:3))
-print(sample(1:3, size=3, replace=FALSE))  # same as previous line
-print(sample(1:2, size=10, prob=c(1,3), replace=TRUE))
-      
